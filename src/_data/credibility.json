@@ -1,0 +1,34 @@
+{
+  "stats": [
+    {
+      "label": "Publications",
+      "collection": "publications",
+      "manual": -1
+    },
+    {
+      "label": "Projects",
+      "collection": "projects"
+    },
+    {
+      "label": "Team Members",
+      "collection": "",
+      "data": "team"
+    },
+    {
+      "label": "Grants",
+      "manual": 5
+    },
+    {
+      "label": "Years Active",
+      "manual": 3
+    }
+  ],
+  "venues": [
+    {
+      "name": "ICML"
+    },
+    {
+      "name": "CVPR"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "href": "/#hero",
+      "type": "default"
+    },
+    {
+      "label": "Mission",
+      "href": "/#mission",
+      "type": "default"
+    },
+    {
+      "label": "Research",
+      "href": "/#research",
+      "type": "default"
+    },
+    {
+      "label": "Partners",
+      "href": "/#partners"
+    },
+    {
+      "label": "Credibility",
+      "href": "/#credibility"
+    },
+    {
+      "label": "Other",
+      "href": "https://example.com",
+      "has_dropdown": true,
+      "dropdown_items": [
+        {
+          "label": "All projects",
+          "href": "/projects"
+        },
+        {
+          "label": "All publications",
+          "href": "/publications"
+        }
+      ]
+    }
+  ]
+}

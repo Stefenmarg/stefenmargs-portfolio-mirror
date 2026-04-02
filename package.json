@@ -1,0 +1,28 @@
+{
+  "name": "stefenmargs-eleventy-cms-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:": "cross-env BUILD=dev eleventy --serve",
+    "cms": "npx decap-server",
+    "start": "npm-run-all --parallel cms dev",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://codeberg.org/stefenmarg/stefenmargs-eleventy-cms-template/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "better-sqlite3": "^12.8.0",
+    "cross-env": "^10.1.0",
+    "decap-server": "^3.5.2",
+    "dotenv": "^17.3.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

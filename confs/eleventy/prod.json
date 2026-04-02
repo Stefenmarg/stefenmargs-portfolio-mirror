@@ -1,0 +1,27 @@
+{
+    "input": "src",
+    "output": "_site",
+
+    "globalData": [
+      { 
+        "name": "url", 
+        "value": "https://eleventy-static-cms-template.vercel.app/"
+      }, 
+      { 
+        "name" : "baseurl",
+        "value" : "" 
+      },
+      {
+        "name": "decap_config_path",
+        "value": "/admin/config_prod.yml"
+      }
+    ],
+
+    "watchList": [
+    ],
+
+    "passThrough": [
+      "src/media",
+      "src/admin/config_prod.yml"
+    ]
+}

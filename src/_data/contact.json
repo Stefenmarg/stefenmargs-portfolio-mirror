@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Phone",
+      "fa_icon": "fa-solid fa-phone",
+      "value": "+XXX XXX-XXX-XXX"
+    },
+    {
+      "name": "Email",
+      "fa_icon": "fa-solid fa-at",
+      "value": "example@example.com"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+backend:
+  name: gitea
+  repo: stefenmarg/stefenmargs-eleventy-cms-template
+  app_id: a84147cd-dce1-4a2f-b698-d5f144f82433
+  branch: main
+  api_root: https://codeberg.org/api/v1
+  base_url: https://codeberg.org
+  auth_endpoint: https://codeberg.org/login/oauth/authorize
+  site_domain: https://stefenmargs-eleventy-cms-template.vercel.app/
+
+media_folder: "src/media/assets"
+public_folder: "src/media"
+
+site_url: https://stefenmargs-eleventy-cms-template.vercel.app/
+
+collections:
+
+    # ============================================================
+    # Settings
+    # Global site settings, contact info, and navigation
+    # ============================================================
+    -   name: "settings"
+        label: "Settings"
+        files:
+
+            # Site-wide SEO and branding settings
+            -   label: "Site settings"
+                name: "site_items"
+                file: "src/_data/settings.json"
+                fields:
+                    - { label: "Site title", "name": "title", widget: "string", "default": "Your site title" }
+                    - { label: "SEO Site description (Up to 155 characters)", "name": "desc", widget: "string", "default": "Your site's description" }
+                    - { label: "SEO Keywords", name: "keywords", widget: "string", default: "" }
+                    -   label: "SEO Authors"
+                        name: "author"
+                        widget: "list"
+                        field: { label: "Author", name: "authors", widget: "list", default: [ ] }
+                    - { label: "Canonical URL", name: "canonical_url", widget: "string", default: "" }
+                    - { label: "Header Image", name: "header_image", widget: "image", required: true }
+                    - { label: "OG Image", name: "og_image", widget: "image", required: false }
+                    # Favicons - generate all sizes from a single source image
+                    # Recommended tool: https://realfavicongenerator.net
+                    - { label: "Favicon 16x16", name: "favicon_16", widget: "image", required: false }
+                    - { label: "Favicon 32x32", name: "favicon_32", widget: "image", required: false }
+                    - { label: "Favicon 48x48", name: "favicon_48", widget: "image", required: false }
+                    - { label: "Favicon 96x96", name: "favicon_96", widget: "image", required: false }
+                    - { label: "Favicon 192x192", name: "favicon_192", widget: "image", required: false }
+                    - { label: "Favicon 512x512", name: "favicon_512", widget: "image", required: false }
+                    - { label: "Apple touch icon (180x180)", name: "favicon_apple", widget: "image", required: false }
+
+            # Footer contact details (phone, email, etc.)
+            # FA Icon Class: any Font Awesome icon e.g. "fa-solid fa-phone"
+            # See: https://fontawesome.com/icons
+            -   label: "Site contact"
+                name: "contact_items"
+                file: "src/_data/contact.json"
+                fields:
+                    -   label: "Contact Items"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                            - { label: "Contact Option", name: "name", widget: "string", default: "Contact name" }
+                            - { label: "FA Icon Class", name: "fa_icon", widget: "string", default: "fa-solid fa-question" }
+                            - { label: "Contact Value", name: "value", widget: "text", default: "Contact value" }
+
+            # Navigation bar links
+            # Set "Has Dropdown" to true to create a dropdown menu
+            # Dropdown items only appear if "Has Dropdown" is enabled
+            -   label: "Site Navigation"
+                name: "navigation_items"
+                file: "src/_data/header.json"
+                fields:
+                    -   label: "Nav Links"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                            -   label: "Label"
+                                name: "label"
+                                widget: "string"
+                                default: "Navigation Label"
+                            -   label: "URL"
+                                name: "href"
+                                widget: "string"
+                                default: "https://example.com"
+                            -   label: "Has Dropdown"
+                                name: "has_dropdown"
+                                widget: "boolean"
+                                default: false
+                                required: false
+                            -   label: "Dropdown Items"
+                                name: "dropdown_items"
+                                widget: "list"
+                                required: false
+                                fields:
+                                    -   label: "Label"
+                                        name: "label"
+                                        widget: "string"
+                                    -   label: "URL"
+                                        name: "href"
+                                        widget: "string"
+
+    # ============================================================
+    # Home Page Sections
+    # Controls content for each section on the home page
+    # ============================================================
+
+    # Hero section - the first thing visitors see
+    -   name: "hero"
+        label: "Hero"
+        files:
+            -   label: "Hero data"
+                name: "hero"
+                file: "src/_data/hero.json"
+                fields:
+                    - { label: "Title", name: "title", widget: "string", default: "Our site" }
+                    - { label: "Description", name: "desc", widget: "text", default: "A short description for the hero section" }
+                    - { label: "Button label", name: "button_label", widget: "string", default: "Get started" }
+                    - { label: "Button link", name: "button_link", widget: "string", default: "https://example.com" }
+                    - { label: "Image link", name: "img", widget: "string", default: "https://placehold.co/256x256" }
+
+    # Mission section - values and principles grid
+    -   name: "mission"
+        label: "Mission"
+        files:
+            -   label: "Mission data"
+                name: "mission"
+                file: "src/_data/mission.json"
+                fields:
+                    - { label: "Title", name: "title", widget: "string", default: "Our Mission" }
+                    - { label: "Description", name: "desc", widget: "text", default: "A short description of your mission" }
+                    -   label: "Missions"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                            - { label: "Title", name: "title", widget: "string", default: "Mission title" }
+                            - { label: "Short Description", name: "desc", widget: "text", default: "A brief description" }
+
+    # Team section - member cards with avatar and bio
+    -   name: "team"
+        label: "Team"
+        files:
+            -   label: "Team Members"
+                name: "team"
+                file: "src/_data/team.json"
+                fields:
+                    - { label: "Section Description", name: "desc", widget: "text", default: "Short description here." }
+                    -   label: "Team Members"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                            - { label: "Name", name: "name", widget: "string", default: "Username" }
+                            - { label: "Avatar URL", name: "icon", widget: "image", default: "https://placehold.co/256x256" }
+                            - { label: "Description", name: "desc", widget: "text", default: "Your description here" }
+
+    # Research areas - topic cards shown on the home page
+    -   name: "research"
+        label: "Research"
+        files:
+            -   label: "Research Areas"
+                name: "research_areas"
+                file: "src/_data/research.json"
+                fields:
+                    -   label: "Research Areas"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                            - { label: "Area name", name: "name", widget: "string", default: "Research area name" }
+                            - { label: "Icon URL", name: "icon", widget: "string", default: "https://placehold.co/64x64" }
+                            - { label: "Area Description", name: "desc", widget: "text", default: "Short description here." }
+
+    # ============================================================
+    # Content Collections
+    # Folder-based collections - each entry is its own file
+    # ============================================================
+
+    # Projects - each project is a separate markdown file
+    # Files are stored in src/posts/projects/
+    -   name: "projects"
+        label: "Projects"
+        folder: "src/posts/projects"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{name}}"
+        fields:
+            - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/project" }
+            - { label: "Title", name: "title", widget: "string", default: "New project" }
+            - { label: "Date", name: "date", widget: "datetime" }
+            # Do not change "tags" - it is used internally by Eleventy for collections
+            - { label: "Internal Tags", name: "tags", widget: "list", default: [ "project" ] }
+            - { label: "Category", name: "tag", widget: "select", options: [ "Design", "Dev", "Research", "Marketing", "Other" ], default: "Dev" }
+            - { label: "Status", name: "status", widget: "select", options: [ "In progress", "Completed" ], default: "In progress" }
+            - { label: "Description", name: "desc", widget: "text", default: "Your description here." }
+            - { label: "Body", name: "body", widget: "markdown" }
+
+    # Publications - each publication is a separate markdown file
+    # Files are stored in src/posts/publications/
+    -   name: "publications"
+        label: "Publications"
+        folder: "src/posts/publications"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{name}}"
+        fields:
+            - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/publication" }
+            - { label: "Name", name: "name", widget: "string", default: "New publication" }
+            - { label: "Date", name: "date", widget: "datetime" }
+            - { label: "Type", name: "tag", widget: "select", options: [ "Journal", "Conference", "Preprint", "Report" ], default: "Journal" }
+            - { label: "Description", name: "desc", widget: "text", default: "Your description here." }
+            - { label: "URL", name: "href", widget: "string", default: "https://" }
+            # Body is optional - use for extended abstract or notes
+            - { label: "Body", name: "body", widget: "markdown", required: false }
+
+    # ============================================================
+    # Partners & Credibility
+    # ============================================================
+
+    # Partners - grouped by category, supports logos or text-only display
+    -   name: partners
+        label: Partners
+        files:
+            -   name: partners
+                label: Partners list
+                file: src/_data/partners.json
+                fields:
+                    -   label: Categories
+                        name: categories
+                        widget: list
+                        fields:
+                            - { label: Category name, name: label, widget: string }
+                            -   label: Partners
+                                name: items
+                                widget: list
+                                fields:
+                                    - { label: Name, name: title, widget: string }
+                                    - { label: URL, name: url, widget: string, required: false }
+                                    # Leave logo empty to display name as text instead
+                                    - { label: Logo, name: logo, widget: image, required: false }
+
+    # Credibility stats - shown in the "By the numbers" section
+    # Each stat can pull its count from an Eleventy collection, a data file, or a manual number
+    # Priority: collection > data file > manual
+    -   name: "credibility"
+        label: "Credibility Stats"
+        files:
+            -   name: "credibility"
+                label: "Stats"
+                file: "src/_data/credibility.json"
+                fields:
+                    -   label: "Stats"
+                        name: "stats"
+                        widget: "list"
+                        fields:
+                            - { label: "Label", name: "label", widget: "string" }
+                            - { label: "Collection", name: "collection", widget: "string", required: false, hint: "Eleventy collection name, e.g. 'publications'. Leave empty to use a manual count." }
+                            - { label: "Manual Count", name: "manual", widget: "number", required: false, hint: "Used if no collection name is set." }
+                            - { label: "Data File", name: "data", widget: "string", required: false, hint: "Global data file key, e.g. 'team'" }
+                    -   label: "Venues"
+                        name: "venues"
+                        widget: "list"
+                        fields:
+                            - { label: "Venue name", name: "name", widget: "string" }

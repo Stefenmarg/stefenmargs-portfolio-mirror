@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "icon": "https://placehold.co/64x64",
+      "name": "Machine Learning",
+      "desc": "Developing novel algorithms and models that allow systems to learn from data and improve over time."
+    },
+    {
+      "icon": "https://placehold.co/64x64",
+      "name": "Data Science",
+      "desc": "Extracting meaningful insights from complex, large-scale datasets to support evidence-based decision making."
+    },
+    {
+      "icon": "https://placehold.co/64x64",
+      "name": "Cybersecurity",
+      "desc": "Studying vulnerabilities, threat models, and defensive strategies to protect digital systems and data."
+    }
+  ]
+}

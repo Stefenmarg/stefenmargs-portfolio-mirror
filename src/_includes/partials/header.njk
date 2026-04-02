@@ -1,0 +1,44 @@
+<nav class="sticky top-0 w-full z-20 border-b border-default bg-olive-100/80 backdrop-blur-sm" id="navbar">
+	<div class="flex flex-wrap items-center justify-between mx-auto p-4">
+		<div class="flex-shrink-0 pb-2">
+			<a href="/" class="logo"> <img src="{{settings.header_image}}"> </a>
+		</div>
+
+		<button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-solid" aria-expanded="false">
+			<span class="sr-only">
+				Open main menu
+			</span>
+			<svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+		</button>
+		
+		<div class="hidden w-full md:block md:w-auto" id="navbar-solid">
+			<ul class="items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-secondary-soft">
+				{% for entry in header.items %}
+				<li class="relative group">
+					{% if entry.has_dropdown %}
+						<button data-dropdown-toggle class="block py-2 px-3 md:text-fg-brand md:p-0 flex items-center gap-1">
+							{{ entry.label }}
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</button>
+						<ul class="hidden group-hover:block absolute top-full left-0 bg-white border border-gray-200 rounded-xl shadow-sm p-2 min-w-[150px] z-50">
+							{% for child in entry.dropdown_items %}
+							<li>
+								<a href="{{ child.href }}" class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100">
+									{{ child.label }}
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					{% else %}
+						<a href="{{ entry.href }}" class="block py-2 px-3 md:text-fg-brand md:p-0">
+							{{ entry.label }}
+						</a>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+  </div>
+</nav>

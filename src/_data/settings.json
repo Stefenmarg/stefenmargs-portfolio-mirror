@@ -1,0 +1,19 @@
+{
+  "canonical_url": "https://eleventy-static-cms-template.vercel.app",
+  "header_image": "https://placehold.co/150x60",
+  "favicon_32": "/media/assets/favicon/favicon-32x32.png",
+  "keywords": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt pulvinar commodo",
+  "favicon_512": "/media/assets/favicon/favicon-512x512.png",
+  "author": [
+    [
+      "Author#1"
+    ]
+  ],
+  "favicon_48": "",
+  "favicon_apple": "/media/assets/favicon/favicon-180x180.png",
+  "favicon_16": "/media/assets/favicon/favicon-16x16.png",
+  "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae condimentum urna. Suspendisse consequat, nisi eget blandit interdum, erat nisi mollis ligula, a porta ex odio non ex. Aliquam rhoncus cursus magna, id feugiat erat aliquam vel. Sed aliquam nisl quis justo convallis tincidunt. Etiam sit amet viverra tortor. Quisque tincidunt nisi justo, nec varius nibh iaculis quis. Vestibulum maximus hendrerit venenatis. Nunc sed commodo nunc, nec sodales augue. Aliquam cursus mauris eget turpis tempus bibendum. Sed.",
+  "og_image": "https://placehold.co/1200x640",
+  "title": "Our site",
+  "favicon_192": "/media/assets/favicon/favicon-192x192.png"
+}

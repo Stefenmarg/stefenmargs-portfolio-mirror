@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "label": "Category with Pictures",
+      "items": [
+        {
+          "title": "Collaborator #1",
+          "url": "https://example.com",
+          "logo": "https://placehold.co/512x128"
+        },
+        {
+          "title": "Collaborator #2",
+          "url": "https://example.com",
+          "logo": "https://placehold.co/512x128"
+        },
+        {
+          "title": "Collaborator #3",
+          "url": "https://example.com",
+          "logo": "https://placehold.co/512x128"
+        },
+        {
+          "title": "Collaborator #4",
+          "url": "https://example.com",
+          "logo": "https://placehold.co/512x128"
+        }
+      ]
+    },
+    {
+      "label": "Category without Pictures",
+      "items": [
+        {
+          "title": "Collaborator #1",
+          "url": "https://example.com",
+          "logo": ""
+        },
+        {
+          "title": "Collaborator #2",
+          "url": "https://example.com",
+          "logo": ""
+        },
+        {
+          "title": "Collaborator #3",
+          "url": "https://example.com",
+          "logo": ""
+        }
+      ]
+    }
+  ]
+}

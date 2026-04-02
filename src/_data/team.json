@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "name": "John Doe",
+      "icon": "https://placehold.co/256x256",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan cursus sapien, ac pharetra est rutrum nec. Cras enim sem, cursus eget efficitur id, fermentum in mi. Quisque malesuada mollis ligula, et."
+    },
+    {
+      "name": "Jason Doe",
+      "icon": "https://placehold.co/256x256",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan cursus sapien, ac pharetra est rutrum nec. Cras enim sem, cursus eget efficitur id, fermentum in mi. Quisque malesuada mollis ligula, et.Your description here"
+    },
+    {
+      "name": "Maria Doe",
+      "icon": "https://placehold.co/256x256",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan cursus sapien, ac pharetra est rutrum nec. Cras enim sem, cursus eget efficitur id, fermentum in mi. Quisque malesuada mollis ligula, et."
+    },
+    {
+      "name": "Helena Doe",
+      "icon": "https://placehold.co/256x256",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan cursus sapien, ac pharetra est rutrum nec. Cras enim sem, cursus eget efficitur id, fermentum in mi. Quisque malesuada mollis ligula, et."
+    }
+  ],
+  "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel leo finibus, cursus nunc sit amet, gravida eros. Donec mattis, urna eget laoreet interdum, libero metus sagittis velit, a fermentum est dolor ut leo. Proin varius interdum nibh, quis rutrum ex cursus a. Proin vel lectus neque. Praesent laoreet odio mauris, nec rutrum arcu venenatis finibus. Proin viverra magna quis ante iaculis congue."
+}
