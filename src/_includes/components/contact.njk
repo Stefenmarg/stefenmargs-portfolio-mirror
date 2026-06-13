@@ -1,0 +1,48 @@
+<section class="relative px-4 sm:px-10 py-12 overflow-hidden" id="contact">
+  <!-- Top divider -->
+  <div class="max-w-4xl mx-auto mb-12">
+    <div class="h-px bg-gray-200 w-full"></div>
+  </div>
+
+  <!-- Header -->
+  <p class="text-center text-sm font-medium tracking-widest uppercase text-gray-400 mb-4">Get in touch</p>
+  <p class="text-center text-3xl md:text-5xl font-bold leading-tight mb-2">Contact me</p>
+  <p class="text-center text-base leading-relaxed text-gray-500 mb-10">
+    Have a question, want to chat about a project, or feedback about something I wrote? Let me know!
+  </p>
+
+  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    <form id="contact-form" class="space-y-8">
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium">Your email</label>
+        <input type="email" id="email" name="email"
+          class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors"
+          placeholder="name@example.com" required>
+      </div>
+
+      <div>
+        <label for="subject" class="block mb-2 text-sm font-medium">Subject</label>
+        <input type="text" id="subject" name="subject"
+          class="block w-full p-3 text-sm text-gray-900 bg-gray-50 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors"
+          placeholder="What's on your mind?" required>
+      </div>
+
+      <div>
+        <label for="message" class="block mb-2 text-sm font-medium">Your message</label>
+        <textarea id="message" name="message" rows="6"
+          class="block w-full p-2.5 text-sm text-gray-900 bg-gray-50 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors"
+          placeholder="Leave a comment..."></textarea>
+      </div>
+
+      <!-- Status message -->
+      <p id="form-status" class="text-sm text-gray-500 hidden"></p>
+
+      <button type="submit" id="submit-btn"
+        class="inline-flex items-center gap-2 text-sm font-medium border border-gray-300 rounded-full px-6 py-2.5 hover:bg-gray-100 transition-colors">
+        Send message
+      </button>
+
+    </form>
+  </div>
+</section>

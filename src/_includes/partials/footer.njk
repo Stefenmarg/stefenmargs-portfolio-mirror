@@ -4,7 +4,7 @@
 
     <div class="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-8 sm:gap-16 px-4 sm:px-0">
         <div class="max-w-xs text-center sm:text-left">
-            <p class="text-center text-base text-gray-500 mb-8">About Us</p>
+            <p class="text-center text-base text-gray-500 mb-8">About</p>
             <p class="text-sm text-gray-500 leading-relaxed">
                 {{ footer.about }}
             </p>
@@ -13,10 +13,16 @@
             <p class="text-center text-base text-gray-500 mb-8">Contact Us</p>
             <div class="flex flex-col gap-2">
                 {% for entry in contact.items %}
-                <div class="flex items-center gap-2">
-                    <i class="{{ entry.fa_icon }}"></i>
-                    <span class="font-normal">{{ entry.value }}</span>
-                </div>
+                    {% if entry.url %}
+                        <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">
+                    {% endif %}
+                        <div class="flex items-center gap-2">
+                            <i class="{{ entry.fa_icon }}"></i>
+                            <span class="font-normal">{{ entry.value }}</span>
+                        </div>
+                    {% if entry.url %}
+                        </a>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

@@ -1,14 +1,21 @@
 {
   "items": [
     {
-      "name": "Phone",
-      "fa_icon": "fa-solid fa-phone",
-      "value": "+XXX XXX-XXX-XXX"
-    },
-    {
       "name": "Email",
       "fa_icon": "fa-solid fa-at",
-      "value": "example@example.com"
+      "value": "contact [at] stefenmarg [dot] com"
+    },
+    {
+      "name": "Codeberg",
+      "fa_icon": "fa-brands fa-git-alt",
+      "value": "My Codeberg",
+      "url": "https://codeberg.org/stefenmarg/"
+    },
+    {
+      "name": "LinkedIn",
+      "fa_icon": "fa-brands fa-linkedin",
+      "value": "My LinkedIn",
+      "url": "https://www.linkedin.com/in/stefenmarg/"
     }
   ]
 }

@@ -6,22 +6,24 @@
       "type": "default"
     },
     {
-      "label": "Mission",
-      "href": "/#mission",
-      "type": "default"
-    },
-    {
       "label": "Research",
       "href": "/#research",
       "type": "default"
     },
     {
-      "label": "Partners",
-      "href": "/#partners"
+      "label": "Projects",
+      "href": "/#projects",
+      "has_dropdown": false
     },
     {
-      "label": "Credibility",
-      "href": "/#credibility"
+      "label": "Publications",
+      "href": "/#publications",
+      "has_dropdown": false
+    },
+    {
+      "label": "Contact",
+      "href": "/#contact",
+      "has_dropdown": false
     },
     {
       "label": "Other",

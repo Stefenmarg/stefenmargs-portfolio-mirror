@@ -1,17 +1,17 @@
 {
-  "name": "stefenmargs-eleventy-cms-template",
+  "name": "stefenmargs-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:": "cross-env BUILD=dev eleventy --serve",
+    "11ty-dev": "cross-env BUILD=dev eleventy --serve",
     "cms": "npx decap-server",
-    "start": "npm-run-all --parallel cms dev",
+    "dev": "npm-run-all --parallel cms 11ty-dev",
     "build": "eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "https://codeberg.org/stefenmarg/stefenmargs-eleventy-cms-template/"
+    "url": "https://codeberg.org/stefenmarg/stefenmargs-portfolio/"
   },
   "keywords": [],
   "author": "",

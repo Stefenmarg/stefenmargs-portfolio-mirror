@@ -1,7 +1,7 @@
 {
-  "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus ipsum, fermentum vel tellus ut, rutrum rutrum sem. Donec dictum tellus id eros lobortis.",
-  "button_label": "Get started",
-  "button_link": "/",
-  "title": "Our site",
-  "img": "https://placehold.co/256x256"
+  "desc": "I'm a server admin who builds things. Log services, small tools, automations, even site templates; as long as it runs on Linux, it's here!",
+  "button_label": "View Projects",
+  "button_link": "/projects",
+  "title": "Stefenos' Portfolio",
+  "img": "https://codeberg.org/avatars/40d287f9095838f5d7b139df59071b54"
 }
