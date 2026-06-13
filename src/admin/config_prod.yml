@@ -1,12 +1,7 @@
 backend:
-  name: gitea
+  name: github
   repo: stefenmarg/stefenmargs-portfolio
-  app_id: e82d99d3-64ba-4786-a87b-28e6bd08247a
   branch: main
-  api_root: https://codeberg.org/api/v1
-  base_url: https://codeberg.org
-  auth_endpoint: https://codeberg.org/login/oauth/authorize
-  site_domain: https://stefenmarg.com/
 
 media_folder: "src/media/assets"
 public_folder: "src/media"
