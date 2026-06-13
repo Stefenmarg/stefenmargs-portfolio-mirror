@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "name": "Email",
-      "fa_icon": "fa-solid fa-at",
-      "value": "contact [at] stefenmarg [dot] com"
-    },
-    {
       "name": "Codeberg",
       "fa_icon": "fa-brands fa-git-alt",
       "value": "My Codeberg",
