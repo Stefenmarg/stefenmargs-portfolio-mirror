@@ -137,3 +137,20 @@ document.addEventListener("click", (e) => {
     });
   }
 });
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+const btn = document.getElementById("submit-btn");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  await fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString(),
+  });
+  status.textContent = "Message sent! I'll get back to you soon.";
+  status.classList.remove("hidden", "text-red-500");
+  status.classList.add("text-green-600");
+  form.reset();
+});
