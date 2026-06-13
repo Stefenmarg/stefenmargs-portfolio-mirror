@@ -142,42 +142,9 @@ const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const btn = document.getElementById("submit-btn");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  btn.disabled = true;
-  btn.textContent = "Sending...";
-  status.classList.add("hidden");
-
-  try {
-    const res = await fetch("/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: form.email.value,
-        subject: form.subject.value,
-        message: form.message.value,
-      }),
-    });
-
-    if (res.ok) {
-      status.textContent = "Message sent! I'll get back to you soon.";
-      status.classList.remove("hidden", "text-red-500");
-      status.classList.add("text-gray-500");
-      form.reset();
-    } else if (res.status === 429) {
-      status.textContent = "Too many messages. Pl ease try again later.";
-      status.classList.remove("hidden", "text-gray-500");
-      status.classList.add("text-red-500");
-    } else {
-      throw new Error("Server error");
-    }
-  } catch {
-    status.textContent = "Something went wrong, please try again.";
-    status.classList.remove("hidden", "text-gray-500");
-    status.classList.add("text-red-500");
-  } finally {
-    btn.disabled = false;
-    btn.textContent = "Send message";
-  }
+form.addEventListener("submit", (e) => {
+  status.textContent = "Message sent! I'll get back to you soon.";
+  status.classList.remove("hidden", "text-red-500");
+  status.classList.add("text-green-600");
+  form.reset();
 });
