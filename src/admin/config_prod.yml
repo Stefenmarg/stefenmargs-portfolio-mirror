@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: stefenmarg/stefenmargs-portfolio
+  repo: stefenmarg/stefenmargs-portfolio-mirror
   branch: main
 
 media_folder: "src/media/assets"
